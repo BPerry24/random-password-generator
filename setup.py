@@ -4,7 +4,7 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='random-password-generator',
+    name='busie-random-password-generator',
     version='0.0.1',
     author='Brady Perry',
     author_email='brdyprry@gmail.com',
@@ -15,7 +15,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "Licesne :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent"
     ],
     python_requires=">=3.6"
