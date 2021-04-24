@@ -1,6 +1,9 @@
 # Random Password Generator #
 A cryptographically random and secure password generator which relies only on the standard python library
 
+## Installation ##
+`python3 -m pip install busie-random-password-generator`
+
 ## Usage ##
 ```python
 from random_password_generator import generate_random_password
@@ -23,3 +26,5 @@ password = generate_random_password(lowercase=False)
 # password without numbers
 password = generate_random_password(numbers=False)
 ```
+
+Can also be run using `python3 -m generate_random_password`
