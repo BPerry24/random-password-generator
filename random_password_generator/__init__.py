@@ -21,22 +21,18 @@ def generate_random_password(
 ) -> str:
     """generates a cryptographically random and secure password
     """
+    triples = [
+        ('numbers', numbers, NUMBERS),
+        ('special characters', special, SPECIAL),
+        ('uppercase', uppercase, UPPER),
+        ('lowercase', lowercase, LOWER)
+    ]
     required_charsets = set()
-    if numbers:
-        warn('using numbers in random password is recommended')
-        required_charsets.add(NUMBERS)
-    
-    if special:
-        warn('using special characters in random password is recommended')
-        required_charsets.add(SPECIAL)
-    
-    if uppercase:
-        warn('using uppercase letters in random password is recommended')
-        required_charsets.add(UPPER)
-    
-    if lowercase:
-        warn('using lowercase letters in random password is recommended')
-        required_charsets.add(LOWER)
+    for name, boolean, chars in triples:
+        if boolean:
+            required_charsets.add(chars)
+        else:
+            warn(f'using {name} in random password is recommended')
 
     if not len(required_charsets):
         raise ValueError('options will result in empty password')
