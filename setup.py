@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='busie-random-password-generator',
-    version='0.0.1',
+    version='1.0.0',
     author='Brady Perry',
     author_email='brdyprry@gmail.com',
     description='A cryptographically random and secure random password generator',
